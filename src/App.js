@@ -1,17 +1,14 @@
 import React from "react";
-import Eightball from "./Eightball";
+import Board from "./Board";
 import "./App.css";
+
+/** Simple app that just shows the LightsOut game. */
 
 function App() {
   return (
-    <div className="App">
-      <div className="container">
-        <span>Hello World</span>
-        <div>
-          <Eightball />
-        </div>
+      <div className="App">
+        <Board />
       </div>
-    </div>
   );
 }
 
