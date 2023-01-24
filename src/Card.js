@@ -1,31 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Card.css";
 
-/** Card: displays image.
- * 
- * Props:
- * - caption: string describing the image
- * - src: string for the image link
- * - currNum: integer for what image we're on
- * - totalNum: integer for how many images are in the collection
- * 
- * State:
- * - none
- * 
- * App --> Carousel --> Card
- */
+/** Single card: just renders the card as received from deck. */
 
- function Card({caption, src, currNum, totalNum}) {
+function Card({ name, image }) {
+  // get these once; it will never be updated for the same card
+  const [{ angle, xPos, yPos }] = useState({
+    angle: Math.random() * 90 - 45,
+    xPos: Math.random() * 40 - 20,
+    yPos: Math.random() * 40 - 20,
+  });
 
-  return (
-    <div className="Card">
-      <h4 className="Card-title">{caption}</h4>
-      <img className="Card-image" src={src} alt={caption} />
-      <small className="Card-small">
-        Image {currNum} of {totalNum}.
-      </small>
-    </div>
-  );
+  const transform = `translate(${xPos}px, ${yPos}px) rotate(${angle}deg)`;
+
+  return <img
+      className="Card"
+      alt={name}
+      src={image}
+      style={{ transform }} />;
 }
 
 export default Card;

@@ -1,9 +1,11 @@
-import "./App.css";
+import React from "react";
+import Deck from "./Deck.js"
 
 function App() {
   return (
     <div className="App">
-      <BoxList />
+      <h1>Hello World</h1>
+      <Deck />
     </div>
   );
 }
