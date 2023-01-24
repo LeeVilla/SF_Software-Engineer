@@ -1,14 +1,11 @@
-import React from "react";
-import Board from "./Board";
-import "./App.css";
-
-/** Simple app that just shows the LightsOut game. */
+import './App.css';
 
 function App() {
   return (
-      <div className="App">
-        <Board />
-      </div>
+    <div className="App">
+    <TodoList />
+
+    </div>
   );
 }
 
