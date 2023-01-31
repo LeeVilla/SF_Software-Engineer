@@ -1,30 +1,16 @@
-import Navbar from "./Navbar";
-import Dog1 from "./routes/Dog1";
-import Dog2 from "./routes/Dog2";
-import Dog3 from "./routes/Dog3";
-import Home from "./routes/Home";
+import React, { Component } from "react";
+import JokeListWithHooks from "./JokeList_hooks";
 
-function App() {
-  let component
-  switch (window.location.pathname) {
-    case "/":
-      component = <Home />;
-      break;
-    case "/Dog1":
-      component = <Dog1 />;
-      break;
-    case "/Dog2":
-      component = <Dog2 />;
-      break;
-    case "/Dog3":
-      component = <Dog3 />;
-      break;
-  }
+/** App component. Renders list of jokes. */
+
+import React from 'react'
+
+const App = () => {
   return (
     <>
-      <Navbar />
-      {component}
+      <JokeListWithHooks />
     </>
-  );
+  )
 }
-export default App;
+
+export default App
