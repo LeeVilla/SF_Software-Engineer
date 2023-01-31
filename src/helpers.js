@@ -1,14 +1,7 @@
-function choice(items) {
-  let i = Math.floor(Math.random() * items.length);
-  return items[i];
+/* Select a random element from values array. */
+function choice(values) {
+  const randIdx = Math.floor(Math.random() * values.length);
+  return values[randIdx];
 }
 
-function remove(item,items){
-    for(let i=0; i < items.length; i++){
-        if (items[i] === item) {
-            reutn[...items.slice(0,i), ...items.slice(i+1)];
-        }
-    }
-}
-
-export { choice, remove }
+export { choice };
