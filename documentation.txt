@@ -1,0 +1,13 @@
+MadLib is a React component that implements a Madlib form. The component uses the useState hook to manage the state of the input fields. The component consists of the following parts:
+* A div container with a class name of MadLib-form
+* An h1 header with the text "Madlibs!"
+    * A form with the following input fields and labels:
+    * Noun One: A text input field that is required and its value is managed by the nounOne state
+    * Noun Two: A text input field that is required
+    * Adjective: A text input field that is required
+    * Color: A select dropdown with 4 options (Blue, Red, Green, Orange)
+* A submit button with the text "Get Story"
+
+The event handler will be called when the form is submitted, and you can add the logic for processing the form data. 
+
+In this example, the handleSubmit function is called when the form is submitted. The function uses preventDefault to prevent the default form behavior (i.e. reloading the page). The function then logs the values of the input fields to the console for demonstration purposes.
